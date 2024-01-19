@@ -53,5 +53,5 @@ for i in qmof_cssr:
                     "outputs/sa/{}.sa".format(qmof), "CSSR_Files/{}.cssr".format(qmof)])
 
     # Volume
-    subprocess.run(["./network", "-ha", "-vol","{}".format(str(probeRadius)), "{}".format(str(probeRadius)), "{}".format(str(n_samples)), 
+    subprocess.run(["./network", "-ha", "-vol", "{}".format(str(probeRadius)), "{}".format(str(probeRadius)), "{}".format(str(n_samples)), 
                     "outputs/vol/{}.vol".format(qmof), "CSSR_Files/{}.cssr".format(qmof)])
