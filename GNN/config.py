@@ -22,7 +22,7 @@ test = True
 # Dataset parameters
 indicies = [6]
 indx_str = f"_{indicies[0]}"
-pos = torch.tensor(indicies[0])
+pos = indicies[0]
 
 num = [0, 5394]
 
