@@ -1,5 +1,7 @@
 # IsothermNet
-Code release for [Unified physio-thermodynamic descriptors via learned CO<sub>2</sub> adsorption properties in metal-organic frameworks](link)
+Code release for [Unified physio-thermodynamic descriptors via learned CO<sub>2</sub> adsorption properties in metal-organic frameworks](link) (published in ___)
+
+IsothermNet is 
 
 Graph neural networks for material property prediction of MOFs
 
@@ -15,7 +17,7 @@ The partial dataset can be found in ```./data/```, and the full dataset can be f
 - **```X_dataset_electro_xyz_bond_struc.pth```**: post-processed (featurized with ```dataProcessing.py```) structural information
 - **```texturalProperties_vol.xlsx```**: textural properties
 - **```y_dataset19.pth```**: uptake data in g/g
-- **```H_dataset.pth```**: heat of adsorption ($\Delta$H<sub>ads</sub>) data in kJ/mol
+- **```H_dataset.pth```**: heat of adsorption ($\Delta$ H<sub>ads</sub>) data in kJ/mol
 
 All MOF samples are sourced from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO<sub>2</sub> adsorption-capable based on the kinetic diameter of a CO<sub>2</sub> molecule). The crystallographic (.cif) files for each MOF structure can be obtained [here](https://github.com/Andrew-S-Rosen/QMOF/) [1,2].
 
