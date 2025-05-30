@@ -11,7 +11,7 @@ The required Python packages can be found in the Dockerfile.
 
 ## Data
 
-The partial dataset can be found in ```./data```, and the full dataset can be found in the [Zenodo repository](link) under ```full_dataset.zip```. The compressed file contains: 
+The partial dataset can be found in ```./data/```, and the full dataset can be found in the [Zenodo repository](link) under ```full_dataset.zip```. The compressed file contains: 
 - **```X_dataset_electro_xyz_bond_struc.pth```**: post-processed (featurized with ```dataProcessing.py```) structural information
 - **```texturalProperties_vol.xlsx```**: textural properties
 - **```y_dataset19.pth```**: uptake data in g/g
@@ -50,11 +50,12 @@ From the learned adsorption properties, we formulated two sets of universal anal
 
 ![Alt text](figs/fig4.png)
 
-To use the descriptors, please refer to ```./descriptors``` to find the demos, which include the parameters for different pressures. The full set of parameters for all descriptors can be found in the [paper](link). 
+To use the descriptors, please refer to ```./descriptors/``` to find the Jupyter demos, which include the parameters for different pressures. The full set of parameters for all descriptors can be found in the [paper](link). 
 
 ## Citing
 
 If you found this work useful, please consider citing: 
+
 [something]
 
 ## Acknowledgements
