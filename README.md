@@ -1,5 +1,5 @@
 # IsothermNet
-Code release for [paper]
+Code release for [Unified physio-thermodynamic descriptors via learned CO2 adsorption properties in metal-organic frameworks](link)
 
 Graph neural networks for material property prediction of MOFs
 
@@ -37,17 +37,31 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 2. Run ```train_isothermnet.py``` to train the model.
 3. Load the best model (set ```load_checkpoint = True``` and ```num_epoch = 0```) and predict on an unseen test set. 
 
-An example of a fully-trained model for the 50 bars case can be found in the [Zenodo repository](link) under ```trained_model_50_bars.zip```. The compressed file contains the checkpoints, best model, and results. 
+An example of a fully-trained model for the 50 bars case can be found in the [Zenodo repository](link) under ```trained_model_50_bars.zip```. The compressed file contains the checkpoints, best model, and results. The trained model can be downloaded below:
+```
+wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.gz
+```
 
 ## Using the Descriptors
 
+From the learned adsorption properties, we formulated two sets of universal analytical (A1/A2) and physical (P1/P2) descriptors that effectively bridge MOF structural/surface properties, uptake, and heat of adsorption together. The following descriptors are optimized for different pressure regimes and can be summarized as follows: 
+- **Analytical descriptors**: ```[A1]``` for high-pressure regime, ```[A2]``` for low-pressure regime (< 10 bars)
+- **Physical descriptors**: ```[P1]``` for high-pressure regime, ```[A2]``` for low-pressure regime (< 15 bars)
+
+![Alt text](figs/fig4.png)
+
+To use the descriptors, please refer to ```./descriptors``` to find the demos, which include the parameters for different pressures. The full set of parameters for all descriptors can be found in the [paper](link). 
 
 ## Citing
+
 If you found this work useful, please consider citing: 
+[something]
 
 ## Acknowledgements
+
 This work used the Engaging OnDemand clusters at MIT Office of Research Computing and Data (ORCD). This work additionally used Bridges-2 at Pittsburgh Supercomputing Center (PSC) through allocation MCH230021 from the Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support (ACCESS) program, which is supported by National Science Foundation Grants No. 2138259, 2138286, 2138307, 2137603, and 2138296. This work is also supported by the National Science Foundation Graduate Research Fellowship under Grant No. 2141064. 
 
 ## References
+
 [1] A.S. Rosen, S.M. Iyer, D. Ray, Z. Yao, A. Aspuru-Guzik, L. Gagliardi, J.M. Notestein, R.Q. Snurr. "Machine Learning the Quantum-Chemical Properties of Metal–Organic Frameworks for Accelerated Materials Discovery", Matter, 4, 1578-1597 (2021). DOI: 10.1016/j.matt.2021.02.015.  
 [2] A.S. Rosen, V. Fung, P. Huck, C.T. O'Donnell, M.K. Horton, D.G. Truhlar, K.A. Persson, J.M. Notestein, R.Q. Snurr. "High-Throughput Predictions of Metal–Organic Framework Electronic Properties: Theoretical Challenges, Graph Neural Networks, and Data Exploration," npj Comput. Mat., 8, 112 (2022). DOI: 10.1038/s41524-022-00796-6.
