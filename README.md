@@ -15,7 +15,7 @@ The partial dataset can be found in ```./data/```, and the full dataset can be f
 - **```X_dataset_electro_xyz_bond_struc.pth```**: post-processed (featurized with ```dataProcessing.py```) structural information
 - **```texturalProperties_vol.xlsx```**: textural properties
 - **```y_dataset19.pth```**: uptake data in g/g
-- **```H_dataset.pth```**: heat of adsorption data in kJ/mol
+- **```H_dataset.pth```**: heat of adsorption ($\Delta$H<sub>ads</sub>) data in kJ/mol
 
 All MOF samples are sourced from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO<sub>2</sub> adsorption-capable based on the kinetic diameter of a CO<sub>2</sub> molecule). The crystallographic (.cif) files for each MOF structure can be obtained [here](https://github.com/Andrew-S-Rosen/QMOF/) [1,2].
 
@@ -37,7 +37,7 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 2. Run ```train_isothermnet.py``` to train the model.
 3. Load the best model (set ```load_checkpoint = True``` and ```num_epoch = 0```) and predict on an unseen test set.
 
-Ultimately, IsothermNet can be used to construct full uptake and heat of adsorption isotherms.  $\Delta$
+Ultimately, IsothermNet can be used to construct full uptake and heat of adsorption ($\Delta$H<sub>ads</sub>) isotherms.
 
 ![Alt text](figs/fig6.svg)
 
@@ -48,7 +48,7 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 
 ## Using the Descriptors
 
-From the learned adsorption properties, we formulated two sets of universal analytical (A1/A2) and physical (P1/P2) descriptors that effectively bridge MOF structural/surface properties, uptake, and heat of adsorption together. The following descriptors are optimized for different pressure regimes and can be summarized as follows: 
+From the learned adsorption properties, we formulated two sets of universal analytical (A1/A2) and physical (P1/P2) descriptors that effectively bridge MOF structural/surface properties, uptake, and heat of adsorption ($\Delta$H<sub>ads</sub>) together. The following descriptors are optimized for different pressure regimes and can be summarized as follows: 
 - **Analytical descriptors**: ```[A1]``` for high-pressure regime, ```[A2]``` for low-pressure regime (< 10 bars)
 - **Physical descriptors**: ```[P1]``` for high-pressure regime, ```[A2]``` for low-pressure regime (< 15 bars)
 
