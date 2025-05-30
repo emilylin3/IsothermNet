@@ -12,12 +12,12 @@ The required Python packages can be found in the Dockerfile.
 ## Data
 
 The partial dataset can be found in ```./data```, and the full dataset can be found in the [Zenodo repository](link) under ```full_dataset.zip```. The compressed file contains: 
-- ```**X_dataset_electro_xyz_bond_struc.pth**```: post-processed (featurized with dataProcessing.py) structural information
-- **texturalProperties_vol.xlsx**: textural properties
-- **y_dataset19.pth**: uptake data
-- **H_dataset.pth**: heat of adsorption data
+- ```**X_dataset_electro_xyz_bond_struc.pth**```: post-processed (featurized with ```dataProcessing.py```) structural information
+- ```**texturalProperties_vol.xlsx**```: textural properties
+- ```**y_dataset19.pth**```: uptake data in g/g
+- ```**H_dataset.pth**```: heat of adsorption data in kJ/mol
 
-All MOF samples are sourced from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO2 adsorption-capable based on the kinetic diameter of a CO_{2} molecule). The crystallographic (.cif) files for each MOF structure can be obtained [here](https://github.com/Andrew-S-Rosen/QMOF/) [1,2].
+All MOF samples are sourced from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO_{2} adsorption-capable based on the kinetic diameter of a CO_{2} molecule). The crystallographic (.cif) files for each MOF structure can be obtained [here](https://github.com/Andrew-S-Rosen/QMOF/) [1,2].
 
 The input data can be downloaded here (from Zenodo):
 ```
@@ -27,16 +27,16 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 ## Training IsothermNet
 
 From configs.py file, 
-1. From ```configs.py``` file, load checkpoint, hyperparameter set, and featurized structural inputs (if they exist). If loading final best model, set load_checkpoint = True and num_epoch = 0.
+1. From ```configs.py``` file, load checkpoint, hyperparameter set, and featurized structural inputs (if they exist). If loading the final best model, set ```load_checkpoint = True``` and ```num_epoch = 0```.
    ```
    # Loading checkpoints/data
    load_checkpoint = False        # if False: don't load pre-existing checkpoint, else load best model
    load_hp = True                 # if True: load optimal hyperparameter set, else refine with optuna
    run_dataProcess = False        # if False: don't run featurization on structure, else load featurized set
    ```
-2. Run train_isothermnet.py to train the model and predict on an unseen test set. 
+2. Run ```train_isothermnet.py``` to train the model and predict on an unseen test set. 
 
-An example of a fully-trained model for the 50 bars case can be found in the [Zenodo repository](link) under trained_model_50_bars.zip. The compressed file contains the checkpoints, best model, and results. 
+An example of a fully-trained model for the 50 bars case can be found in the [Zenodo repository](link) under ```trained_model_50_bars.zip```. The compressed file contains the checkpoints, best model, and results. 
 
 ## Using the Descriptors
 
