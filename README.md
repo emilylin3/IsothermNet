@@ -2,7 +2,7 @@
 Code release for [paper]
 
 Graph neural networks for material property prediction of MOFs
-![Alt text](figs/main.png)
+![Alt text](figs/main.svg)
 
 ## Installation & Dataset
 
