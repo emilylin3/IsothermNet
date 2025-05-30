@@ -1,9 +1,12 @@
 # IsothermNet
-Code release for [Unified physio-thermodynamic descriptors via learned CO<sub>2</sub> adsorption properties in metal-organic frameworks](link) (published in ___)
+Code release for [Unified physio-thermodynamic descriptors *via* learned CO<sub>2</sub> adsorption properties in metal-organic frameworks](link) (published in ___*somewhere*__)
 
-IsothermNet is 
+IsothermNet is a predictive cascading deep learning model that leverages graph attention (GAT) and crystal graph convolutional neural networks (CGCNN) to estimate uptake and heat of adsorption ($\Delta$ H<sub>ads</sub>) in a high-throughput manner. The GNN-based model is applicable over 0-50 bars and is trained over 19 distinct pressure points, thereby enabling high-resolution, full isotherm reconstruction with higher prediction accuracy than any previous state-of-the-art models. Ultimately, IsothermNet can serve as a surrogate model for computationally-expensive atomistic simulations (e.g., Grand Canonical Monte Carlo [GCMC]), which often require in-depth domain knowledge to perform. Using these learned adsorption properties, we further formulated two sets of holistic descriptors unifying textural properties, isotherm shape, uptake, and heat of adsorption: the first is more physically-interpretable and the second follows a more analytical/mathematical form that excels at differentiating the five isotherm classes. When used cooperatively with IsothermNet, these descriptors can enable efficient material screening and accelerate the discovery of high-performance MOFs for CO2 capture.
 
-Graph neural networks for material property prediction of MOFs
+To summarize, we offer two methods for uptake and $\Delta$ H<sub>ads</sub> prediction: (1) high accuracy estimations utilizing the IsothermNet model or (2) very fast, large-scale predictions using easily-accessible geometric (textural) information *via* universal physical and analytical descriptors. Thus, for the first time, using only easily-accessible crystal information, future researchers can: 
+- Expedite $\Delta$ H<sub>ads</sub> characterization for new, experimentally-synthesized MOFs
+- Employ high-throughput uptake/$\Delta$ H<sub>ads</sub> prediction for theoretical work (wherein sample sizes easily exceed 10<sup>6</sup>)
+- Accelerate isotherm shape determination by bypassing full isotherm (or extraneous uptake/$\Delta$ H<sub>ads</sub>) calculations 
 
 ![Alt text](figs/main.svg)
 
@@ -26,7 +29,7 @@ The input data can be downloaded here (from Zenodo):
 wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.gz
 ```
 
-## Training IsothermNet and Predicting
+## Training IsothermNet and Predicting Isotherms
 
 1. From ```configs.py``` file, load checkpoint, hyperparameter set, and featurized structural inputs (if they exist). 
    
@@ -39,7 +42,7 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 2. Run ```train_isothermnet.py``` to train the model.
 3. Load the best model (set ```load_checkpoint = True``` and ```num_epoch = 0```) and predict on an unseen test set.
 
-Ultimately, IsothermNet can be used to construct full uptake and heat of adsorption ($\Delta$H<sub>ads</sub>) isotherms.
+Ultimately, IsothermNet can be used to construct full uptake and heat of adsorption ($\Delta$ H<sub>ads</sub>) isotherms.
 
 ![Alt text](figs/fig6.svg)
 
@@ -50,7 +53,7 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 
 ## Using the Descriptors
 
-From the learned adsorption properties, we formulated two sets of universal analytical (A1/A2) and physical (P1/P2) descriptors that effectively bridge MOF structural/surface properties, uptake, and heat of adsorption ($\Delta$H<sub>ads</sub>) together. The following descriptors are optimized for different pressure regimes and can be summarized as follows: 
+From the learned adsorption properties, we formulated two sets of universal analytical (A1/A2) and physical (P1/P2) descriptors that effectively bridge MOF structural/surface properties, uptake, and heat of adsorption ($\Delta$ H<sub>ads</sub>) together. The following descriptors are optimized for different pressure regimes and can be summarized as follows: 
 - **Analytical descriptors**: ```[A1]``` for high-pressure regime, ```[A2]``` for low-pressure regime (< 10 bars)
 - **Physical descriptors**: ```[P1]``` for high-pressure regime, ```[A2]``` for low-pressure regime (< 15 bars)
 
