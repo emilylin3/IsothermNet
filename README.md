@@ -11,8 +11,8 @@ The required Python packages can be found in the Dockerfile.
 
 ## Data
 
-The partial dataset can be found in ./data, and the full dataset can be found in the [Zenodo repository](link) under full_dataset.zip. The compressed file contains: 
-- **X_dataset_electro_xyz_bond_struc.pth**: post-processed (featurized with dataProcessing.py) structural information
+The partial dataset can be found in ```./data```, and the full dataset can be found in the [Zenodo repository](link) under ```full_dataset.zip```. The compressed file contains: 
+- ```**X_dataset_electro_xyz_bond_struc.pth**```: post-processed (featurized with dataProcessing.py) structural information
 - **texturalProperties_vol.xlsx**: textural properties
 - **y_dataset19.pth**: uptake data
 - **H_dataset.pth**: heat of adsorption data
