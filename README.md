@@ -18,7 +18,7 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 talk about where your data come from QMOF (link to download cif files)
 talk about how data is organized
 
-The crystallographic (.cif) files for each MOF structure can be obtained from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO2 adsorption-capable based on the kinetic diameter of a CO_{2} molecule. The full QMOF database can be found [here]([https://pages.github.com/](https://github.com/Andrew-S-Rosen/QMOF/)[1,2]. 
+The crystallographic (.cif) files for each MOF structure can be obtained from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO2 adsorption-capable based on the kinetic diameter of a CO_{2} molecule. The full QMOF database can be found [here](https://pages.github.com/](https://github.com/Andrew-S-Rosen/QMOF/)[1,2]. 
 
 ## Training IsothermNet
 
