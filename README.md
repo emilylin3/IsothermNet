@@ -1,5 +1,5 @@
 # IsothermNet
-Code release for [Unified physio-thermodynamic descriptors via learned CO2 adsorption properties in metal-organic frameworks](link)
+Code release for [Unified physio-thermodynamic descriptors via learned CO<sub>2</sub> adsorption properties in metal-organic frameworks](link)
 
 Graph neural networks for material property prediction of MOFs
 
