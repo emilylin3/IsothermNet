@@ -12,10 +12,10 @@ The required Python packages can be found in the Dockerfile.
 ## Data
 
 The partial dataset can be found in ```./data```, and the full dataset can be found in the [Zenodo repository](link) under ```full_dataset.zip```. The compressed file contains: 
-- ```**X_dataset_electro_xyz_bond_struc.pth**```: post-processed (featurized with ```dataProcessing.py```) structural information
-- ```**texturalProperties_vol.xlsx**```: textural properties
-- ```**y_dataset19.pth**```: uptake data in g/g
-- ```**H_dataset.pth**```: heat of adsorption data in kJ/mol
+- ```X_dataset_electro_xyz_bond_struc.pth```: post-processed (featurized with ```dataProcessing.py```) structural information
+- ```texturalProperties_vol.xlsx```: textural properties
+- ```y_dataset19.pth```: uptake data in g/g
+- **```H_dataset.pth```**: heat of adsorption data in kJ/mol
 
 All MOF samples are sourced from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO<sub>2</sub> adsorption-capable based on the kinetic diameter of a CO<sub>2</sub> molecule). The crystallographic (.cif) files for each MOF structure can be obtained [here](https://github.com/Andrew-S-Rosen/QMOF/) [1,2].
 
