@@ -7,7 +7,7 @@ IsothermNet is a cascading deep learning model that leverages graph attention (G
 
 To summarize, we offer two methods for uptake and $\Delta$ H<sub>ads</sub> prediction: (1) high accuracy estimations utilizing the IsothermNet model or (2) very fast, large-scale predictions using easily-accessible geometric (textural) information *via* universal physical and analytical descriptors. Thus, for the first time, using only easily-accessible crystal information, future researchers can: 
 - Expedite $\Delta$ H<sub>ads</sub> characterization for new, experimentally-synthesized MOFs
-- Employ high-throughput uptake/$\Delta$ H<sub>ads</sub> prediction for theoretical work (wherein sample sizes easily exceed 10<sup>6</sup>)
+- Employ high-throughput uptake and $\Delta$ H<sub>ads</sub> prediction for theoretical work (wherein sample sizes easily exceed 10<sup>6</sup>)
 - Accelerate isotherm shape determination by bypassing full isotherm (or extraneous uptake and $\Delta$ H<sub>ads</sub>) calculations 
 
 ## Installation
