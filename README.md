@@ -37,7 +37,7 @@ wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.
 2. Run ```train_isothermnet.py``` to train the model.
 3. Load the best model (set ```load_checkpoint = True``` and ```num_epoch = 0```) and predict on an unseen test set.
 
-Ultimately, IsothermNet can be used to construct full uptake and heat of adsorption isotherms.  $\delta$
+Ultimately, IsothermNet can be used to construct full uptake and heat of adsorption isotherms.  $\Delta$
 
 ![Alt text](figs/fig6.svg)
 
