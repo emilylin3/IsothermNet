@@ -5,20 +5,24 @@ Graph neural networks for material property prediction of MOFs
 
 ![Alt text](figs/main.svg)
 
-## Installation & Dataset
+## Installation
 
-Python packages in dockerfile 
-partial data in ./data but full data in zenodo[link] (full_dataset.zip)
+The required Python packages are located in the Dockerfile. 
 
-(replace w/ actual links)
+## Data
+
+The partial dataset can be found in ./data, and the full dataset can be found in the [Zenodo repository](link) under full_dataset.zip. The compressed file contains: 
+- X_dataset_electro_xyz_bond_struc.pth: post-processed (featurized with dataProcessing.py) structural information
+- texturalProperties_vol.xlsx: textural properties
+- y_dataset19.pth: uptake data
+- H_dataset.pth: heat of adsorption data
+
+All MOF samples are sourced from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO2 adsorption-capable based on the kinetic diameter of a CO_{2} molecule). The crystallographic (.cif) files for each MOF structure can be obtained [here](https://github.com/Andrew-S-Rosen/QMOF/) [1,2].
+
+The input data can be downloaded here (from Zenodo):
 ```
 wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.gz
-wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.gz
 ```
-talk about where your data come from QMOF (link to download cif files)
-talk about how data is organized
-
-The crystallographic (.cif) files for each MOF structure can be obtained from the Quantum MOF (QMOF) database (of the 20,375 MOFs, only 5,394 are CO2 adsorption-capable based on the kinetic diameter of a CO_{2} molecule. The full QMOF database can be found [here](https://github.com/Andrew-S-Rosen/QMOF/)[1,2]. 
 
 ## Training IsothermNet
 
