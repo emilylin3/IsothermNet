@@ -26,7 +26,7 @@ All MOF samples are sourced from the Quantum MOF (QMOF) database (of the 20,375 
 
 The input data can be downloaded here (from Zenodo):
 ```
-wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.gz
+wget -O full_dataset.zip "https://zenodo.org/api/records/15555513/files/full_dataset.zip/content"
 ```
 
 ## Training IsothermNet and Predicting Isotherms
@@ -48,7 +48,7 @@ Ultimately, IsothermNet can be used to construct full uptake and heat of adsorpt
 
 An example of a fully-trained model for the 50 bars case can be found in the [Zenodo repository](link) under ```trained_model_50_bars.zip```. The compressed file contains the checkpoints, best model, and results. The trained model can be downloaded below:
 ```
-wget https://zenodo.org/api/files/273e913a-e11d-46e1-96dc-a28497c49d36/data.tar.gz
+wget -O trained_model_50_bars.zip "https://zenodo.org/api/records/15555513/files/trained_model_50_bars.zip/content"
 ```
 
 ## Using the Descriptors
