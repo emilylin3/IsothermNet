@@ -1,5 +1,5 @@
 # IsothermNet
-Code release for [Unified physio-thermodynamic descriptors *via* learned CO<sub>2</sub> adsorption properties in metal-organic frameworks](link) (published in *npj Computational Materials*)
+Code release for [Unified physio-thermodynamic descriptors *via* learned CO<sub>2</sub> adsorption properties in metal-organic frameworks](https://www.nature.com/articles/s41524-025-01700-8) (published in *npj Computational Materials*)
 
 ![Alt text](figs/main.svg)
 
