@@ -16,7 +16,7 @@ The required Python packages can be found in the Dockerfile.
 
 ## Data
 
-The partial dataset can be found in ```./data/```, and the full dataset can be found in the [Zenodo repository](link) under ```full_dataset.zip```. The compressed file contains: 
+The partial dataset can be found in ```./data/```, and the full dataset can be found in the [Zenodo repository](https://zenodo.org/records/15555513) under ```full_dataset.zip```. The compressed file contains: 
 - **```X_dataset_electro_xyz_bond_struc.pth```**: post-processed (featurized with ```dataProcessing.py```) structural information
 - **```texturalProperties_vol.xlsx```**: textural properties
 - **```y_dataset19.pth```**: uptake data in g/g
@@ -46,7 +46,7 @@ Ultimately, IsothermNet can be used to construct full uptake and heat of adsorpt
 
 ![Alt text](figs/fig6.svg)
 
-An example of a fully-trained model for the 50 bars case can be found in the [Zenodo repository](link) under ```trained_model_50_bars.zip```. The compressed file contains the checkpoints, best model, and results. The trained model can be downloaded below:
+An example of a fully-trained model for the 50 bars case can be found in the [Zenodo repository](https://zenodo.org/records/15555513) under ```trained_model_50_bars.zip```. The compressed file contains the checkpoints, best model, and results. The trained model can be downloaded below:
 ```
 wget -O trained_model_50_bars.zip "https://zenodo.org/api/records/15555513/files/trained_model_50_bars.zip/content"
 ```
@@ -59,7 +59,7 @@ From the learned adsorption properties, we formulated two sets of universal anal
 
 ![Alt text](figs/fig4.png)
 
-To use the descriptors, please refer to ```./descriptors/``` to find the Jupyter demos, which include the parameters for different pressures. The full set of parameters for all descriptors can be found in the [paper](link). 
+To use the descriptors, please refer to ```./descriptors/``` to find the Jupyter demos, which include the parameters for different pressures. The full set of parameters for all descriptors can be found in the [paper](https://www.nature.com/articles/s41524-025-01700-8). 
 
 ## Citing
 
