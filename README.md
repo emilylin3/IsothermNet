@@ -65,7 +65,7 @@ To use the descriptors, please refer to ```./descriptors/``` to find the Jupyter
 
 If you found this work useful, please consider citing: 
 
-[something]
+Lin, E., Zhong, Y., Chen, G. et al. Unified physio-thermodynamic descriptors via learned CO2 adsorption properties in metal-organic frameworks. npj Comput Mater 11, 225 (2025). https://doi.org/10.1038/s41524-025-01700-8
 
 ## Acknowledgements
 
